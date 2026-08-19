@@ -1,0 +1,29 @@
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int y = sc.nextInt();
+ 
+        y++;
+ 
+        while (true) {
+            String year = String.valueOf(y);
+            Set<Character> digits = new HashSet<>();
+ 
+            for (char ch : year.toCharArray()) {
+                digits.add(ch);
+            }
+ 
+            if (digits.size() == year.length()) {
+                System.out.println(y);
+                break;
+            }
+ 
+            y++;
+        }
+ 
+        sc.close();
+    }
+}
