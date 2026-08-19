@@ -1,0 +1,17 @@
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int x = sc.nextInt();
+ 
+        // Each step can cover at most 5 positions.
+        // Therefore, minimum steps = ceil(x / 5).
+        int steps = (x + 4) / 5;
+ 
+        System.out.println(steps);
+ 
+        sc.close();
+    }
+}
